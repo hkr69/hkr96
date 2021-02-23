@@ -1,0 +1,13 @@
+server:
+  port: 8002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@localhost:7001/eureka
+
+spring:
+  application:
+    name: myconsumer
+  main:
+    allow-bean-definition-overriding: true

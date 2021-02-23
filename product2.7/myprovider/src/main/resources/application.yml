@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@localhost:7001/eureka
+
+spring:
+  application:
+    name: myprovider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/producttakeout?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    auto-mapping-behavior: full
